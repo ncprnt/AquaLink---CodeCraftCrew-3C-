@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@FeedbackForm.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="feedback.FeedbackController">
+    <children>
+      <Pane prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@FeedbackForm.css">
+         <children>
+            <Pane layoutX="21.0" prefHeight="96.0" prefWidth="1034.0" styleClass="pane2" stylesheets="@FeedbackForm.css">
+               <children>
+                  <Label layoutX="35.0" layoutY="31.0" text="Feedback" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="21.0" layoutY="113.0" prefHeight="617.0" prefWidth="1034.0" styleClass="pane-background" stylesheets="@../report/ReportForm.css">
+               <children>
+                      <TableView fx:id="tableMyReports" layoutX="29.0" layoutY="29.0" prefHeight="560.0" prefWidth="976.0" styleClass="text-field" stylesheets="@FeedbackForm.css">
+                          <columns>
+                              <TableColumn fx:id="colReportId1" prefWidth="147.9999656677246" text="Full Name" />
+                              <TableColumn fx:id="colReportId" prefWidth="148.80003356933594" text="Project Name" />
+                              <TableColumn fx:id="colReportDate" prefWidth="132.79998779296875" text="Date" />
+                              <TableColumn fx:id="colReportLocation" prefWidth="195.2000732421875" text="Location" />
+                              <TableColumn fx:id="colReportDescription" minWidth="0.0" prefWidth="402.39996337890625" text="Feedback Description" />
+                          </columns>
+                      </TableView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

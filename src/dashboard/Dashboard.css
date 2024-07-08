@@ -1,0 +1,128 @@
+.pane-background {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+}
+
+.button-submit {
+    -fx-background-color: #07BDE8;
+    -fx-text-color: #FFFFFF;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+}
+
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C9C9C9;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.table-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #020236;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.pane {
+    -fx-background-color: #e6e9ef;
+    -fx-background-radius: 20;
+}
+
+.anchor-pane {
+    -fx-background-color: #e6e9ef;
+}
+
+.pane2 {
+    -fx-background-color: #020236;
+    -fx-background-radius: 20;
+
+}
+
+
+.chart-bar.series0 {
+    -fx-bar-fill: #1f77b4;
+}
+
+.chart-bar.series1 {
+    -fx-bar-fill: #FF0000;
+}
+
+.chart-bar.series2 {
+    -fx-bar-fill: #039487;
+
+}
+
+.chart-bar.series3 {
+    -fx-bar-fill: #1f77b4;
+}
+
+.chart-bar.series4 {
+    -fx-bar-fill: #FF0000;
+}
+
+.chart-bar.series5 {
+    -fx-bar-fill: #039487;
+}
+
+.chart-bar.series6 {
+    -fx-bar-fill: #1f77b4;
+
+}
+
+.chart-bar.series7 {
+    -fx-bar-fill: #FF0000;
+
+}
+
+.chart-bar.series8 {
+    -fx-bar-fill: #039487;
+}
+
+.pane-background {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+}
+
+.button-submit {
+    -fx-background-color: #07BDE8;
+    -fx-text-color: #FFFFFF;
+    -fx-border-radius: 5;
+
+}
+
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C9C9C9;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.table-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #020236;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.pane {
+    -fx-background-color: #e6e9ef;
+    -fx-background-radius: 20;
+
+}
+
+.pane2 {
+    -fx-background-color: #020236;
+    -fx-background-radius: 20;
+
+}
+
+.anchor-pane {
+    -fx-background-color: #e6e9ef;
+    -fx-background-radius: 20;
+}
+
+.pict {
+    -fx-background-radius: 10;
+}

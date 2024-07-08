@@ -1,0 +1,64 @@
+.pane-1 {
+    -fx-background-color: #020236;
+}
+
+.button {
+    -fx-background-color: #020236;
+
+}
+
+.pane-bg {
+    -fx-background-color: #fafbfd;
+
+}
+
+.pane-bg2 {
+    -fx-background-color: #ffffff;
+
+}
+
+.pane-2 {
+    -fx-background-color: #020236;
+    -fx-background-radius: 20;
+}
+
+.anchor {
+    -fx-background-color: #e6e9ef;
+}
+
+.pane-background {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+}
+
+
+.pane-background2 {
+    -fx-background-color: #07BDE8;
+    -fx-background-radius: 15;
+}
+
+.button-read-more {
+    -fx-background-color: #07BDE8;
+    -fx-text-color: #FFFFFF;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+}
+
+.chart-bar.series6 {
+    -fx-bar-fill: #1f77b4;
+
+}
+
+.chart-bar.series7 {
+    -fx-bar-fill: #FF0000;
+
+}
+
+.chart-bar.series8 {
+    -fx-bar-fill: #039487;
+}
+
+.button-read-more {
+    -fx-font-weight: bold;
+}

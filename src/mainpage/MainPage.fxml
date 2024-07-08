@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #020236;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpage.MainPage">
+   <children>
+      <Button fx:id="joinUsButton" layoutX="56.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleJoinUsButtonAction" prefHeight="39.0" prefWidth="122.0" styleClass="button-join-us" stylesheets="@MainPage.css" text="Join Us!" textAlignment="CENTER" textFill="#020236">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <ImageView fitHeight="57.0" fitWidth="200.0" layoutX="56.0" layoutY="29.0">
+         <image>
+            <Image url="@../resources/Logo%20Name.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="56.0" layoutY="415.0" prefHeight="30.0" prefWidth="540.0" text="Empowering communities through collaborative projects," textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="443.0" text="for cleaner water and better sanitation." textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutX="877.0" layoutY="172.0" prefHeight="450.0" prefWidth="392.0" styleClass="pane-2" stylesheets="@MainPage.css">
+         <children>
+            <Pane layoutX="-21.0" layoutY="-20.0" prefHeight="450.0" prefWidth="392.0" styleClass="pane" stylesheets="@MainPage.css">
+               <children>
+                  <ImageView fitHeight="450.0" fitWidth="391.5" layoutX="-20.0" layoutY="-20.0">
+                     <image>
+                        <Image url="@../resources/Clean%20Water%20and%20Sanitation%20Cropped.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="56.0" layoutY="257.0" prefHeight="94.0" prefWidth="290.0" text="Your Link" textFill="#07bde8">
+         <font>
+            <Font name="System Bold" size="64.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="323.0" prefHeight="94.0" prefWidth="626.0" text="to a Healthier Future" textFill="#07bde8">
+         <font>
+            <Font name="System Bold" size="64.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

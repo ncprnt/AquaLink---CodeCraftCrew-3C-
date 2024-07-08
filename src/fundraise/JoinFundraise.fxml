@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@Fundraise.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fundraise.JoinFundraiseController">
+    <children>
+        <Pane fx:id="contentPane" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@Fundraise.css">
+         <children>
+            <Pane layoutX="21.0" layoutY="113.0" prefHeight="617.0" prefWidth="1034.0" styleClass="pane-background" stylesheets="@Fundraise.css">
+               <children>
+                  <Pane layoutX="556.0" layoutY="32.0" prefHeight="554.0" prefWidth="450.0" styleClass="pane2" stylesheets="@../report/ReportForm.css">
+                     <children>
+                        <Pane layoutX="25.0" layoutY="24.0" prefHeight="240.0" prefWidth="401.0" styleClass="pane-background" stylesheets="@../report/ReportForm.css">
+                           <children>
+                              <ImageView fitHeight="175.1" fitWidth="340.0" layoutX="31.0" layoutY="32.0">
+                                 <image>
+                                    <Image url="@../resources/Donation.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="25.0" layoutY="277.0" text="Donation" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="310.0" prefHeight="122.0" prefWidth="401.0" text="      Directly support projects that resonate with you. Your contributions can make a significant difference in bringing these initiatives to fruition. We provide secure and transparent donation channels to ensure that your generosity is utilized effectively and ethically. You can track the impact of your donations and see how your support is making a difference." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="49.6" fitWidth="160.0" layoutX="266.0" layoutY="486.0">
+                           <image>
+                              <Image url="@../resources/Logo%20Name%20Slogan.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="29.0" layoutY="32.0" prefHeight="554.0" prefWidth="498.0" styleClass="pane-background3" stylesheets="@../report/ReportForm.css">
+                     <children>
+                            <TextField fx:id="fullNameField" layoutX="79.0" layoutY="108.0" prefHeight="30.0" prefWidth="340.0" promptText="Full Name" />
+                            <TextField fx:id="donationAmountField" layoutX="79.0" layoutY="191.0" prefHeight="30.0" prefWidth="340.0" promptText="Donation Amount" />
+                            <Button layoutX="312.0" layoutY="232.0" onAction="#handleJoinFundraise" prefHeight="26.0" prefWidth="107.0" styleClass="button-submit" text="Donate" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Button>
+                        <Label layoutX="147.0" layoutY="45.0" text="Let's Make a Difference!">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="projectNameField" layoutX="79.0" layoutY="150.0" prefHeight="30.0" prefWidth="340.0" promptText="Project Name" />
+                        <Line endX="524.7999877929688" endY="494.6000061035156" layoutX="-109.0" layoutY="-209.0" startX="189.90000915527344" startY="494.6000061035156" stroke="#c9c9c9" />
+                        <ImageView fitHeight="190.4" fitWidth="340.0" layoutX="78.0" layoutY="308.0">
+                           <image>
+                              <Image url="@../resources/Donation%20Effect.jpg" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="78.0" layoutY="308.0" opacity="0.5" prefHeight="190.4" prefWidth="340.0" styleClass="pane-background4" stylesheets="@Fundraise.css" />
+                        <Label layoutX="168.0" layoutY="390.0" text="Your Help Matters!" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="21.0" prefHeight="96.0" prefWidth="1034.0" styleClass="pane2" stylesheets="@../report/ReportForm.css">
+               <children>
+                  <Label layoutX="35.0" layoutY="31.0" text="Donation" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+        </Pane>
+    </children>
+</AnchorPane>

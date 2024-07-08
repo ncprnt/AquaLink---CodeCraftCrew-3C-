@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="796.0" prefWidth="1075.0" styleClass="anchor-pane-true" stylesheets="@Article.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="article.ArticleController">
+    <children>
+        <Pane fx:id="contentPane" prefHeight="796.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@Article.css">
+            <children>
+            <ScrollPane layoutY="112.0" prefHeight="700.0" prefWidth="1075.0" styleClass="anchor-pane-true" stylesheets="@article.css">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="739.0" prefWidth="1075.0" styleClass="anchor-pane-true" stylesheets="@article.css">
+                     <children>
+                        <Pane fx:id="paneBackground" layoutX="20.0" prefHeight="670.0" prefWidth="1034.0" styleClass="pane-background" stylesheets="@Article.css">
+                           <children>
+                              <Label fx:id="articleTitle" layoutX="346.0" layoutY="22.0" prefHeight="63.0" prefWidth="655.0" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="articlePicture" fitHeight="199.5" fitWidth="300.0" layoutX="28.0" layoutY="29.0">
+                                 <image>
+                                    <Image url="@../resources/Article%201.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="upperParagraph" layoutX="346.0" layoutY="88.0" prefHeight="139.0" prefWidth="655.0" textAlignment="JUSTIFY" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lowerParagraph" layoutX="28.0" layoutY="246.0" prefHeight="395.0" prefWidth="973.0" textAlignment="JUSTIFY" wrapText="true">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+            <Pane layoutX="21.0" prefHeight="96.0" prefWidth="1034.0" styleClass="pane2" stylesheets="@Article.css">
+               <children>
+                  <Label layoutX="35.0" layoutY="31.0" text="Article" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnBack" layoutX="962.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleLoadBack" styleClass="pane2" stylesheets="@../appoverview/AppOverview.css">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../resources/Back%20button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+.pane-background {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+}
+
+.button-submit {
+    -fx-background-color: #07BDE8;
+    -fx-text-color: #FFFFFF;
+    -fx-background-radius: 10;
+
+
+}
+
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C9C9C9;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+ 
+    .table-view {
+        -fx-background-color: #FFFFFF;
+        -fx-border-color: #020236;
+        -fx-border-radius: 10;
+        -fx-background-radius: 10;
+    }
+    
+    .pane {
+        -fx-background-color: #e6e9ef;
+        -fx-background-radius: 20;
+    
+    }
+    
+    .pane2 {
+        -fx-background-color: #020236;
+        -fx-background-radius: 20;
+    
+    }
+    
+    .anchor-pane {
+        -fx-background-color: #e6e9ef;
+    }
+    
+    .pane-background3 {
+        -fx-background-color: #ffffff;
+        -fx-border-color: #C9C9C9;
+        -fx-background-radius: 15;
+        -fx-border-radius: 15;
+    
+    }

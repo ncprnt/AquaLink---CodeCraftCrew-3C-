@@ -1,0 +1,15 @@
+
+
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C9C9C9;
+    -fx-border-radius: 5;
+
+
+}
+
+.button-login {
+    -fx-background-color: #07BDE8;
+    -fx-text-color: #FFFFFF;
+    -fx-border-radius: 5;
+}

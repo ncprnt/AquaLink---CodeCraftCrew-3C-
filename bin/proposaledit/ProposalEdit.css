@@ -1,0 +1,49 @@
+.pane-background {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+}
+
+.choice {
+    -fx-background-color: #07BDE8;
+    -fx-text-color: #FFFFFF;
+    -fx-border-radius: 5;
+
+}
+
+.button-delete {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: #c9c9c9;
+
+
+
+}
+
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C9C9C9;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.table-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #020236;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.pane-2 {
+    -fx-background-color: #020236;
+    -fx-background-radius: 20;
+}
+
+.anchor {
+    -fx-background-color: #e6e9ef;
+}
+
+.pane-background {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+}

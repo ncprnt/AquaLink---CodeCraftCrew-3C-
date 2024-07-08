@@ -1,0 +1,31 @@
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C9C9C9;
+    -fx-border-radius: 5;
+}
+
+.text-date {
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 5;
+}
+
+.button-next {
+    -fx-background-color: #07BDE8;
+    -fx-text-color: #FFFFFF;
+    -fx-border-radius: 5;
+}
+
+.rec-background {
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+
+
+}
+
+.text-field2 {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C9C9C9;
+    -fx-border-radius: 5;
+    -fx-text-color: #C9C9C9;
+}

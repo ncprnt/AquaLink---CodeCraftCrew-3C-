@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@Fundraise.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fundraise.FundraiseController">
+    <children>
+        <Pane fx:id="contentPane" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@Fundraise.css">
+         <children>
+            <Pane layoutX="21.0" layoutY="113.0" prefHeight="617.0" prefWidth="1034.0" styleClass="pane-background" stylesheets="@Fundraise.css">
+               <children>
+                      <TextField fx:id="titleField" layoutX="33.0" layoutY="32.0" prefHeight="30.0" prefWidth="259.0" promptText="Project Title" styleClass="text-field" stylesheets="@Fundraise.css" />
+                      <DatePicker fx:id="deadlinePicker" layoutX="33.0" layoutY="74.0" prefHeight="30.0" prefWidth="259.0" promptText="Deadline" styleClass="text-field" stylesheets="@Fundraise.css" />
+                      <TextArea fx:id="descriptionArea" layoutX="33.0" layoutY="116.0" prefHeight="431.0" prefWidth="487.0" promptText="Description" styleClass="text-field" stylesheets="@Fundraise.css" />
+                      <Button layoutX="413.0" layoutY="560.0" onAction="#handlePublishFundraise" prefHeight="26.0" prefWidth="107.0" styleClass="button-submit" stylesheets="@Fundraise.css" text="Publish" textFill="WHITE">
+                          <font>
+                              <Font name="System Bold" size="12.0" />
+                          </font>
+                      </Button>
+                  <Pane layoutX="556.0" layoutY="32.0" prefHeight="554.0" prefWidth="450.0" styleClass="pane2" stylesheets="@Fundraise.css">
+                     <children>
+                        <Pane layoutX="25.0" layoutY="24.0" prefHeight="240.0" prefWidth="401.0" styleClass="pane-background" stylesheets="@../report/ReportForm.css">
+                           <children>
+                              <ImageView fitHeight="160.0" fitWidth="320.0" layoutX="41.0" layoutY="40.0">
+                                 <image>
+                                    <Image url="@../resources/Fundrasie.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label layoutX="25.0" layoutY="277.0" text="Publish a Fundraise" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="310.0" prefHeight="137.0" prefWidth="401.0" text="      Create and publish comprehensive fundraising campaigns for your projects. Provide detailed information about the project title, deadline, and description how the raised funds will be utilized. This feature helps you garner support by transparently sharing your project's needs and the impact it aims to achieve. Engaging descriptions and compelling visuals can help attract donors and ensure the success of your campaign." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="49.6" fitWidth="160.0" layoutX="266.0" layoutY="486.0">
+                           <image>
+                              <Image url="@../resources/Logo%20Name%20Slogan.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="21.0" prefHeight="96.0" prefWidth="1034.0" styleClass="pane2" stylesheets="@../report/ReportForm.css">
+               <children>
+                  <Label layoutX="35.0" layoutY="31.0" text="Publish a Fundraise" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+        </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@Fundraise.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fundraise.FundraiseTableViewController">
+    <children>
+        <Pane prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@Fundraise.css">
+            <children>
+            <Pane layoutX="21.0" prefHeight="96.0" prefWidth="1034.0" styleClass="pane2" stylesheets="@../report/ReportForm.css">
+               <children>
+                  <Label layoutX="35.0" layoutY="31.0" text="Fundraise List" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="21.0" layoutY="113.0" prefHeight="617.0" prefWidth="1034.0" styleClass="pane-background" stylesheets="@Fundraise.css">
+               <children>
+                      <TableView fx:id="fundraiseTable" layoutX="29.0" layoutY="29.0" prefHeight="560.0" prefWidth="976.0" styleClass="text-field" stylesheets="@Fundraise.css">
+                          <columns>
+                              <TableColumn fx:id="colFundraiseId" prefWidth="87.19997787475586" text="ID" />
+                              <TableColumn fx:id="colFundraiseTitle" prefWidth="229.6000518798828" text="Title" />
+                              <TableColumn fx:id="colFundraiseDeadline" prefWidth="118.4000244140625" text="Deadline" />
+                              <TableColumn fx:id="colFundraiseDescription" minWidth="0.0" prefWidth="588.800048828125" text="Description" />
+                          </columns>
+                      </TableView>
+               </children>
+            </Pane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

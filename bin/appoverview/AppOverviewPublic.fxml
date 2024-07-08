@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane-true" stylesheets="@AppOverview.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appoverview.AppOverviewPublicController">
+    <children>
+        <Pane fx:id="contentPane" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane-true" stylesheets="@AppOverview.css">
+            <children>
+            <Pane fx:id="paneBackground" layoutX="21.0" layoutY="113.0" prefHeight="617.0" prefWidth="1034.0" styleClass="pane-background" stylesheets="@AppOverview.css">
+               <children>
+                  <Label layoutX="59.0" layoutY="19.0" prefHeight="47.0" prefWidth="916.0" text="Welcome to our app! This platform is designed to empower you to make a tangible difference in your community. Our goal is to connect you with vital projects and updates, enabling you to contribute meaningfully and stay well-informed. Here's a comprehensive guide to help you navigate and maximize the app's potential:" wrapText="true" />
+                  <Label layoutX="60.0" layoutY="60.0" prefHeight="47.0" prefWidth="916.0" text="Purpose: Our app is your gateway to community engagement. Whether you’re looking to stay informed, contribute to ongoing projects, or raise awareness about important issues, we provide the tools and resources you need to make a positive impact." wrapText="true" />
+                  <Label layoutX="60.0" layoutY="502.0" prefHeight="35.0" prefWidth="916.0" text="How to Get Started: Getting started is simple. Create an account to unlock the full range of features. Once you’re in, explore the dashboard to familiarize yourself with the various sections. From submitting reports to tracking project progress and accessing articles, everything you need is just a few clicks away." wrapText="true" />
+                  <Label layoutX="58.0" layoutY="541.0" prefHeight="35.0" prefWidth="916.0" text="Support and Feedback: We are here to help you. If you need assistance, visit our support page where you’ll find FAQs, guides, and contact information. Don’t hesitate to reach out directly with any questions or concerns. Your feedback is invaluable and helps us refine the app to better meet your needs" wrapText="true" />
+                  <Label layoutX="58.0" layoutY="578.0" prefHeight="20.0" prefWidth="916.0" text="Thank you for joining us in making a positive impact! Together, we can build a stronger, more connected community. Let’s make a difference!" wrapText="true" />
+                  <Label layoutX="60.0" layoutY="107.0" prefHeight="20.0" prefWidth="916.0" text="Features:" wrapText="true" />
+                  <Label layoutX="109.0" layoutY="127.0" prefHeight="59.0" prefWidth="866.0" text="Report Submission: Easily submit detailed reports. Whether it’s an Inadequate Water Infrastructure, lack of sanitation, or any other issue, your input helps keep everyone informed and ensures that concerns are addressed promptly. Our user-friendly interface makes it simple to document and share your observations with the community and relevant authorities." wrapText="true" />
+                  <Label layoutX="109.0" layoutY="186.0" prefHeight="59.0" prefWidth="866.0" text="Project List: Keep track of the progress of various community projects. See their current status, milestones achieved, and overall impact. This feature helps you stay updated on the efforts being made in your community and allows you to witness the positive changes taking place. From new playgrounds being built to environmental clean-up efforts, you can monitor the real-time progress and success of these initiatives." wrapText="true" />
+                  <Label layoutX="109.0" layoutY="243.0" prefHeight="59.0" prefWidth="866.0" text="Access Articles: Gain access to a curated selection of articles and updates related to community efforts. Stay informed with the latest news, insights, and stories that highlight significant initiatives and achievements. Our articles are designed to inspire, inform, and educate, providing you with a deeper understanding of the issues and efforts shaping your community." wrapText="true" />
+                  <Label layoutX="109.0" layoutY="302.0" prefHeight="59.0" prefWidth="866.0" text="Report List: Browse through a comprehensive list of all submitted reports. This allows you to stay informed about ongoing concerns and updates within your community. By viewing reports from other users, you can gain a broader perspective on the issues affecting your area and see how collective action is addressing them." wrapText="true" />
+                  <Label layoutX="109.0" layoutY="400.0" prefHeight="59.0" prefWidth="866.0" text="Fundraising: Discover various fundraising initiatives and their progress. Learn about different causes, see how much has been raised, and find out how you can contribute to their success. Fundraising is a critical aspect of community projects, and your participation can make a significant difference in bringing these initiatives to life." wrapText="true" />
+                  <Label layoutX="109.0" layoutY="362.0" prefHeight="35.0" prefWidth="866.0" text="Donation: Directly support projects that resonate with you. Your contributions can make a significant difference in bringing these initiatives to fruition. We provide secure and transparent donation channels to ensure that your generosity is utilized effectively and ethically. You can track the impact of your donations and see how your support is making a difference." wrapText="true" />
+                  <Label layoutX="109.0" layoutY="460.0" prefHeight="35.0" prefWidth="866.0" text="Feedback: Your feedback is crucial to us. Provide your insights and suggestions to help us improve the app and better serve the community. We value your input and are committed to continuous improvement based on your experiences and recommendations." wrapText="true" />
+                  <Label layoutX="100.0" layoutY="131.0" prefHeight="17.0" prefWidth="0.0" text="•" wrapText="true" />
+                  <Label layoutX="100.0" layoutY="190.0" prefHeight="17.0" prefWidth="0.0" text="•" wrapText="true" />
+                  <Label layoutX="100.0" layoutY="247.0" prefHeight="17.0" prefWidth="0.0" text="•" wrapText="true" />
+                  <Label layoutX="100.0" layoutY="306.0" prefHeight="17.0" prefWidth="0.0" text="•" wrapText="true" />
+                  <Label layoutX="100.0" layoutY="362.0" prefHeight="17.0" prefWidth="0.0" text="•" wrapText="true" />
+                  <Label layoutX="100.0" layoutY="403.0" prefHeight="17.0" prefWidth="0.0" text="•" wrapText="true" />
+                  <Label layoutX="100.0" layoutY="460.0" prefHeight="17.0" prefWidth="0.0" text="•" wrapText="true" />
+               </children>
+            </Pane>
+            <Pane layoutX="21.0" prefHeight="96.0" prefWidth="1034.0" styleClass="pane2" stylesheets="@AppOverview.css">
+               <children>
+                  <Label layoutX="35.0" layoutY="31.0" text="App Overview" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnBack" layoutX="968.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleLoadBack" styleClass="pane2" stylesheets="@AppOverview.css">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../resources/Back%20button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

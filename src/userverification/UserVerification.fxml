@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@UserVerification.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userverification.UserVerificationController">
+    <children>
+        <Pane prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane" stylesheets="@UserVerification.css">
+            <children>
+                <Pane layoutX="21.0" prefHeight="96.0" prefWidth="1034.0" styleClass="pane2" stylesheets="@UserVerification.css">
+                    <children>
+                        <Label layoutX="35.0" layoutY="31.0" text="User Verification" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane layoutX="21.0" layoutY="113.0" prefHeight="617.0" prefWidth="1034.0" styleClass="pane-background" stylesheets="@UserVerification.css">
+                    <children>
+                        <TableView fx:id="tableUserVerification" layoutX="29.0" layoutY="29.0" prefHeight="560.0" prefWidth="976.0" stylesheets="@UserVerification.css">
+                            <columns>
+                                <TableColumn fx:id="firstNameColumn" prefWidth="103.19997787475586" text="First Name" />
+                                <TableColumn fx:id="lastNameColumn" prefWidth="124.00004577636719" text="Last Name" />
+                                <TableColumn fx:id="dobColumn" prefWidth="93.60003662109375" text="Date of Birth" />
+                                <TableColumn fx:id="emailColumn" prefWidth="216.79998779296875" text="Email" />
+                                <TableColumn fx:id="roleColumn" minWidth="0.0" prefWidth="152.800048828125" text="Role" />
+                                <TableColumn fx:id="statusColumn" prefWidth="113.5999755859375" text="Status" />
+                                <TableColumn fx:id="actionColumn" prefWidth="167.20001220703125" text="Actions" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

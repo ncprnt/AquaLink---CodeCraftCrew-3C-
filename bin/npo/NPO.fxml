@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" styleClass="anchor" stylesheets="@NPO.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="npo.NPO">
+    <children>
+      <Pane fx:id="mainContentPane" layoutX="266.0" layoutY="19.0" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor" stylesheets="@NPO.css">
+         <children>
+            <Pane layoutX="21.0" prefHeight="96.0" prefWidth="1034.0" styleClass="pane2" stylesheets="@../report/ReportForm.css">
+               <children>
+                  <Label layoutX="35.0" layoutY="31.0" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="21.0" layoutY="121.0" prefHeight="300.0" prefWidth="508.0" styleClass="pane-background" stylesheets="@../publics/Public.css">
+               <children>
+                  <Label layoutX="24.0" layoutY="18.0" text="Project Statistics">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <BarChart fx:id="projectChart" layoutX="24.0" layoutY="49.0" prefHeight="237.0" prefWidth="461.0">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM">
+                           <tickLabelFont>
+                              <Font name="System Bold" size="8.0" />
+                           </tickLabelFont>
+                        </CategoryAxis>
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT">
+                           <tickLabelFont>
+                              <Font name="System Bold" size="8.0" />
+                           </tickLabelFont>
+                        </NumberAxis>
+                     </yAxis>
+                  </BarChart>
+               </children>
+            </Pane>
+            <Pane layoutX="21.0" layoutY="443.0" prefHeight="287.0" prefWidth="508.0" styleClass="pane-2" stylesheets="@NPO.css">
+               <children>
+                  <Label layoutX="31.0" layoutY="27.0" text="App Overview" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="48.0" prefHeight="180.0" prefWidth="252.0" text="This platform is designed to empower you to make a tangible difference in your community. Our goal is to connect you with vital projects and updates, enabling you to contribute meaningfully and stay well-informed. Click the button below to read a comprehensive guide to help you navigate and maximize the app's potential." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnOverview" layoutX="31.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleLoadOverview" prefHeight="27.0" prefWidth="82.0" styleClass="button-read-more" stylesheets="@NPO.css" text="Read More" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="304.0" layoutY="48.0" prefHeight="180.0" prefWidth="180.0" styleClass="pane-background" stylesheets="@NPO.css">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="15.0" layoutY="15.0">
+                           <image>
+                              <Image url="@../resources/Overview.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="562.0" layoutY="121.0" prefHeight="609.0" prefWidth="493.0" styleClass="pane-background" stylesheets="@../publics/Public.css">
+               <children>
+                  <Label layoutX="31.0" layoutY="33.0" text="Let's make a difference!">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="246.0" prefHeight="63.0" prefWidth="430.0" text="Let's make a difference together. Your involvement is key to creating positive change. Thank you for joining our mission!" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="224.0" prefHeight="27.0" prefWidth="68.0" text="Welcome," wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nameLabel" layoutX="101.0" layoutY="228.0" prefHeight="20.0" prefWidth="246.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="120.0" fitWidth="79.8" layoutX="335.0" layoutY="92.0">
+                     <image>
+                        <Image url="@../resources/Welcoming%20Pict%202.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="120.0" fitWidth="79.8" layoutX="90.0" layoutY="92.0">
+                     <image>
+                        <Image url="@../resources/Welcoming%20Pict%201.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="120.0" fitWidth="79.8" layoutX="281.0" layoutY="83.0">
+                     <image>
+                        <Image url="@../resources/Welcoming%20Pict%204.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="120.0" fitWidth="79.8" layoutX="135.0" layoutY="83.0">
+                     <image>
+                        <Image url="@../resources/Welcoming%20Pict%203.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="120.0" fitWidth="79.8" layoutX="207.0" layoutY="76.0">
+                     <image>
+                        <Image url="@../resources/Welcoming%20Pict%205.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <Line endX="324.0" layoutX="132.0" layoutY="319.0" startX="-100.0" stroke="#c9c9c9" />
+                  <ImageView fitHeight="235.2" fitWidth="420.0" layoutX="34.0" layoutY="341.0">
+                     <image>
+                        <Image url="@../resources/Donation%20Effect.jpg" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="34.0" layoutY="341.0" opacity="0.5" prefHeight="235.2" prefWidth="420.0" styleClass="pane-background4" stylesheets="@../fundraise/Fundraise.css" />
+                  <Label layoutX="138.0" layoutY="441.0" text="Your Help Matters!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane layoutX="20.0" layoutY="20.0" prefHeight="730.0" prefWidth="224.0" styleClass="pane-2" stylesheets="@NPO.css">
+         <children>
+                  <Button fx:id="btnHome" alignment="BOTTOM_LEFT" layoutX="45.0" layoutY="138.0" onAction="#handleLoadDashboard" prefHeight="38.0" prefWidth="140.0" text="Dashboard" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../resources/Dashboard%20Icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+                  <Button fx:id="btnSubmitProposal" alignment="BOTTOM_LEFT" layoutX="45.0" layoutY="183.0" onAction="#handleSubmitProposal" prefHeight="38.0" prefWidth="146.0" text="Submit Proposal" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../resources/Submit%20Report%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+                  <Button fx:id="btnProjects" alignment="BOTTOM_LEFT" layoutX="45.0" layoutY="363.0" onAction="#handleLoadProjects" prefHeight="38.0" prefWidth="140.0" text="Project list" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../resources/Project%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnProposal" layoutX="45.0" layoutY="228.0" mnemonicParsing="false" onAction="#handleLoadProposal" text="Proposal List" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../resources/Proposal%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnFundraise" layoutX="45.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleLoadFundraise" text="Fundraising" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" y="408.0">
+                     <image>
+                        <Image url="@../resources/Fundraise%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="55.8" fitWidth="180.0" layoutX="22.0" layoutY="31.0">
+               <image>
+                  <Image url="@../resources/Logo%20Name%20Slogan.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnProgress" alignment="BOTTOM_LEFT" layoutX="45.0" layoutY="318.0" onAction="#handleSubmitProgress" prefHeight="38.0" prefWidth="146.0" text="Submit Progress" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../resources/Progres%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReports" alignment="BOTTOM_LEFT" layoutX="45.0" layoutY="408.0" onAction="#handleLoadReports" prefHeight="38.0" prefWidth="140.0" text="Report List" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../resources/Report%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnFundList" layoutX="45.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleLoadFundList" text="Donation List" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../resources/Donation%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnSubmitProject" alignment="BOTTOM_LEFT" layoutX="48.0" layoutY="273.0" onAction="#handleSubmitProject" prefHeight="38.0" prefWidth="140.0" text="Start a Project" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../resources/Submit%20Project%20Buton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnLogOut" layoutX="64.0" layoutY="667.0" mnemonicParsing="false" onAction="#handleLogOut" styleClass="button2" stylesheets="@NPO.css" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../resources/Log%20Out%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

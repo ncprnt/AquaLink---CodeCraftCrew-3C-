@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane-true" stylesheets="@Article.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="article.ArticleFormController">
+    <children>
+        <Pane layoutY="2.0" prefHeight="730.0" prefWidth="1075.0" styleClass="anchor-pane-true" stylesheets="@Article.css" />
+      <Pane layoutX="21.0" prefHeight="96.0" prefWidth="1034.0" styleClass="pane2" stylesheets="@../report/ReportForm.css">
+         <children>
+            <Label layoutX="35.0" layoutY="31.0" text="Publish an Article" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="21.0" layoutY="113.0" prefHeight="617.0" prefWidth="1034.0" styleClass="pane-background" stylesheets="@Article.css">
+         <children>
+                <TextField fx:id="titleField" layoutX="39.0" layoutY="32.0" prefHeight="30.0" prefWidth="464.0" promptText="Title" />
+                <Button fx:id="imageButton" layoutX="808.0" layoutY="556.0" onAction="#handleChooseImage" prefHeight="30.0" prefWidth="104.0" styleClass="button-photo" stylesheets="@Article.css" text="Choose Image">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+                <TextArea fx:id="upperParagraphField" layoutX="39.0" layoutY="74.0" prefHeight="255.0" prefWidth="464.0" promptText="Upper paragraph" styleClass="text-field" stylesheets="@Article.css" wrapText="true" />
+                
+                            <Button fx:id="submitButton" layoutX="921.0" layoutY="556.0" onAction="#handleSubmitArticle" prefHeight="30.0" prefWidth="80.0" styleClass="button-submit" stylesheets="@Article.css" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="lowerParagraphField" layoutX="524.0" layoutY="32.0" prefHeight="511.0" prefWidth="477.0" promptText="Lower Paragraph" styleClass="text-field" stylesheets="@Article.css" wrapText="true" />
+            <Pane layoutX="39.0" layoutY="346.0" prefHeight="240.0" prefWidth="464.0" styleClass="pane2" stylesheets="@../report/ReportForm.css">
+               <children>
+                  <Pane layoutX="28.0" layoutY="27.0" prefHeight="186.0" prefWidth="193.0" styleClass="pane-background" stylesheets="@Article.css">
+                     <children>
+                        <ImageView fitHeight="106.4" fitWidth="160.0" layoutX="17.0" layoutY="40.0">
+                           <image>
+                              <Image url="@../resources/Article.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Label layoutX="239.0" layoutY="27.0" text="Publish an Article" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="239.0" layoutY="56.0" prefHeight="116.0" prefWidth="204.0" text="    Share your articles on community development, social issues, and impactful initiatives. Your contributions inspire and inform our community, fostering collaboration for positive change." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="31.0" fitWidth="100.0" layoutX="341.0" layoutY="184.0">
+                     <image>
+                        <Image url="@../resources/Logo%20Name%20Slogan.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
