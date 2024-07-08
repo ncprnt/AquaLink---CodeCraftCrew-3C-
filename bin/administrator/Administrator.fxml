@@ -294,7 +294,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="64.0" layoutY="664.0" mnemonicParsing="false" styleClass="button2" stylesheets="@Administrator.css" text="Log Out" textFill="WHITE">
+            <Button layoutX="64.0" layoutY="664.0" mnemonicParsing="false" onAction="#handleLogOut" styleClass="button2" stylesheets="@Administrator.css" text="Log Out" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
