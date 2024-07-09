@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <reports>
-        
-    
+
+
     <report>
-                
+
         <id>1</id>
-                
+
         <status>Accepted</status>
-                
+
         <title>Kekurangan sumber air bersih</title>
-                
+
         <date>2024-07-08</date>
-                
+
         <location>Sleman, Yogyakarta</location>
-                
+
         <description>Kekurangan akses terhadap sumber air bersih bagi masyarakat</description>
-            
+
     </report>
-    
+
 </reports>
