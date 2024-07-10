@@ -23,7 +23,7 @@ public class FeedbackService {
             Document doc = dBuilder.parse(xmlFile);
             doc.getDocumentElement().normalize();
 
-            NodeList feedbackList = doc.getElementsByTagName("FeedbackForm");
+            NodeList feedbackList = doc.getElementsByTagName("feedback");
 
             for (int i = 0; i < feedbackList.getLength(); i++) {
                 Element feedbackElement = (Element) feedbackList.item(i);
