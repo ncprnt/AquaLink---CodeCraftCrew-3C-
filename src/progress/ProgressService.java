@@ -26,7 +26,7 @@ public class ProgressService {
             Document doc = dBuilder.parse(xmlFile);
 
             doc.getDocumentElement().normalize();
-            NodeList nodeList = doc.getElementsByTagName("Progress");
+            NodeList nodeList = doc.getElementsByTagName("progress");
 
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Element element = (Element) nodeList.item(i);
