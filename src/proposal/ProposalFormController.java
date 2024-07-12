@@ -37,7 +37,12 @@ public class ProposalFormController {
         String location = locationField.getText();
 
         if (title.isEmpty() || date == null || description.isEmpty() || location.isEmpty()) {
-            // Show error message or handle validation
+            // Show error message for empty fields
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("All fields must be filled out.");
+            alert.showAndWait();
             return;
         }
 

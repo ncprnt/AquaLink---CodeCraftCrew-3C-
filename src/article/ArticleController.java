@@ -42,6 +42,7 @@ public class ArticleController {
 
     @FXML
     public void initialize() {
+        loadArticle(currentArticleIndex);
         loadArticles();
     }
 
@@ -76,7 +77,7 @@ public class ArticleController {
     }
 
     // Method to load a specific article based on index
-    private void loadArticle(int index) {
+    public void loadArticle(int index) {
         try {
             File file = new File("src/database/Article.xml");
 

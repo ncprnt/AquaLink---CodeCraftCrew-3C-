@@ -61,18 +61,18 @@ public class ArticleFormController {
             return;
         }
 
-        if (wordCount(title) > 20) {
-            showAlert("Error", "Title cannot exceed 20 words!", Alert.AlertType.ERROR);
+        if (wordCount(title) >= 10) {
+            showAlert("Error", "Title must be less than 10 words!", Alert.AlertType.ERROR);
             return;
         }
 
-        if (wordCount(upperParagraph) > 180) {
-            showAlert("Error", "Upper paragraph cannot exceed 180 words!", Alert.AlertType.ERROR);
+        if (wordCount(upperParagraph) >= 150) {
+            showAlert("Error", "Upper paragraph must be less than 150 words!", Alert.AlertType.ERROR);
             return;
         }
 
-        if (wordCount(lowerParagraph) > 400) {
-            showAlert("Error", "Lower paragraph cannot exceed 400 words!", Alert.AlertType.ERROR);
+        if (wordCount(lowerParagraph) >= 400) {
+            showAlert("Error", "Lower paragraph must be less than 400 words!", Alert.AlertType.ERROR);
             return;
         }
 
@@ -101,7 +101,6 @@ public class ArticleFormController {
 
     private void saveArticleToXML(ArticleForm article) {
         try {
-
             System.out.println(article.getImagePath());
             DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();

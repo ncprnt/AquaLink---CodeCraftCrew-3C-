@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <users>
     <user>
-        <firstName>John</firstName>
+        <firstName>Jane</firstName>
         <lastName>Doe</lastName>
         <dob>2024-07-04</dob>
         <email>gov@mail.go.id</email>
@@ -10,8 +10,8 @@
         <status>Approved</status>
     </user>
     <user>
-        <firstName>John</firstName>
-        <lastName>Doe</lastName>
+        <firstName>Lionel</firstName>
+        <lastName>Messi</lastName>
         <dob>2024-07-04</dob>
         <email>pub@gmail.com</email>
         <password>pub123</password>
@@ -19,8 +19,8 @@
         <status>Approved</status>
     </user>
     <user>
-        <firstName>John</firstName>
-        <lastName>Doe</lastName>
+        <firstName>Cristiano</firstName>
+        <lastName>Ronaldo</lastName>
         <dob>2024-07-04</dob>
         <email>npo@gmail.com</email>
         <password>npo123</password>
@@ -28,8 +28,8 @@
         <status>Approved</status>
     </user>
     <user>
-        <firstName>John</firstName>
-        <lastName>Doe</lastName>
+        <firstName>David</firstName>
+        <lastName>Beckham</lastName>
         <dob>2024-07-04</dob>
         <email>adm@gmail.com</email>
         <password>adm123</password>

@@ -28,6 +28,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import article.ArticleController;
+
 public class Public implements Initializable {
 
     @FXML
@@ -161,11 +163,6 @@ public class Public implements Initializable {
     }
 
     @FXML
-    private void handleLoadProfile(ActionEvent event) {
-        loadPane("/report/ReportForm.fxml");
-    }
-
-    @FXML
     private void handleLoadFeedback(ActionEvent event) {
         loadPane("/feedback/FeedbackForm.fxml");
     }
@@ -262,7 +259,7 @@ public class Public implements Initializable {
                 btnArticle.setPrefHeight(27.0);
                 btnArticle.setText("Read More");
                 btnArticle.setTextFill(javafx.scene.paint.Color.WHITE);
-                btnArticle.setOnAction(event -> handleLoadArticle(index + 1)); // Example method to handle article loading
+                btnArticle.setOnAction(event -> handleLoadArticle(index)); // Load article based on index
                 btnArticle.getStyleClass().add("button-read-more"); // Add style class if needed
                 btnArticle.getStylesheets().add("publics/Public.css"); // Add stylesheet if needed
     
@@ -280,24 +277,30 @@ public class Public implements Initializable {
     }
     
     
-    private void handleLoadArticle(int articleIndex) {
-        try {
-            String fxmlPath = "/article/Article.fxml"; // Path to your article FXML file
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
-            Parent articlePage = loader.load();
     
-            // Assuming mainContentPane is where you want to load the article
-            mainContentPane.getChildren().clear(); // Clear existing content
-            mainContentPane.getChildren().add(articlePage); // Load new article content
-    
-            // Optionally, you can set a title or do other setup for the loaded article
-            Stage currentStage = (Stage) mainContentPane.getScene().getWindow();
-            currentStage.setTitle("Article Page");
-    
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+private void handleLoadArticle(int articleIndex) {
+    try {
+        String fxmlPath = "/article/Article.fxml"; // Path to your article FXML file
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+        Parent articlePage = loader.load();
+
+        // Pass the article index to the controller
+        ArticleController controller = loader.getController();
+        controller.loadArticle(articleIndex);
+
+        // Assuming mainContentPane is where you want to load the article
+        mainContentPane.getChildren().clear(); // Clear existing content
+        mainContentPane.getChildren().add(articlePage); // Load new article content
+
+        // Optionally, you can set a title or do other setup for the loaded article
+        Stage currentStage = (Stage) mainContentPane.getScene().getWindow();
+        currentStage.setTitle("Article Page");
+
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+}
+
     
 
 }
