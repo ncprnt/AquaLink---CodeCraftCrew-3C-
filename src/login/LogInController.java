@@ -12,10 +12,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import npo.NPO;
+import publics.Public;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 
 public class LogInController implements Initializable {
 
@@ -53,7 +56,7 @@ public class LogInController implements Initializable {
                 String role = authService.authenticateUser(email, password);
                 if (role != null) {
                     showAlert("Login successful!");
-                    navigateToRolePage(role);
+                    navigateToRolePage(email, role);
                 } else {
                     showAlert("User not found or your account is not approved yet.");
                 }
@@ -72,7 +75,7 @@ public class LogInController implements Initializable {
         return true;
     }
 
-    private void navigateToRolePage(String role) {
+    private void navigateToRolePage(String email, String role) {
         String fxmlPath = "";
         switch (role) {
             case "Administrator":
@@ -95,6 +98,22 @@ public class LogInController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             Parent root = loader.load();
+
+            // Get the controller of the next scene and pass the email
+            Object controller = loader.getController();
+
+            if (controller instanceof Public) {
+                Public publicController = (Public) controller;
+                publicController.setLoggedInUser(email);
+                publicController.initializeWithUser();
+            } else if (controller instanceof NPO) {
+                NPO npoController = (NPO) controller;
+                npoController.setLoggedInUser(email);
+                npoController.initializeWithUser();
+            } else {
+                showAlert("Unknown controller type: " + controller.getClass().getSimpleName());
+                return;
+            }
 
             Stage stage = new Stage();
             stage.setScene(new Scene(root));

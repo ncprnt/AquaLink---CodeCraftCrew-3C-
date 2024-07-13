@@ -44,15 +44,51 @@ public class Public implements Initializable {
     @FXML
     private AnchorPane loadedArticle;
 
+    private String loggedInUserEmail;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         loadProjectData();
-        loadUserName();
         loadArticles();
-
         projectChart.setBarGap(20);
         projectChart.setCategoryGap(20);
+    }
+
+    public void setLoggedInUser(String email) {
+        this.loggedInUserEmail = email;
+    }
+
+    public void initializeWithUser() {
+        loadUserName();
+    }
+
+    private void loadUserName() {
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse("src/database/Account.xml");
+
+            NodeList accounts = doc.getElementsByTagName("user");
+
+            for (int i = 0; i < accounts.getLength(); i++) {
+                Element account = (Element) accounts.item(i);
+                String email = account.getElementsByTagName("email").item(0).getTextContent();
+
+                if (email.equals(loggedInUserEmail)) {
+                    String firstName = account.getElementsByTagName("firstName").item(0).getTextContent();
+                    String lastName = account.getElementsByTagName("lastName").item(0).getTextContent();
+                    String fullName = firstName + " " + lastName + "!";
+                    setNameLabel(fullName);
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setNameLabel(String name) {
+        nameLabel.setText(name);
     }
 
     private void loadProjectData() {
@@ -99,31 +135,6 @@ public class Public implements Initializable {
             series.getData().get(i).getNode().getStyleClass().add("series" + (i + 6)); // Offset by 6 for project series
         }
     }
-
-    private void loadUserName() {
-        try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            Document doc = builder.parse("src/database/Account.xml");
-
-            NodeList accounts = doc.getElementsByTagName("user");
-
-            if (accounts.getLength() > 0) {
-                Element account = (Element) accounts.item(0);
-                String firstName = account.getElementsByTagName("firstName").item(0).getTextContent();
-                String lastName = account.getElementsByTagName("lastName").item(0).getTextContent();
-                String fullName = firstName + " " + lastName + "!";
-                setNameLabel(fullName);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void setNameLabel(String name) {
-        nameLabel.setText(name);
-    }
-
 
     @FXML
     private void handleLoadDashboard(ActionEvent event) {
