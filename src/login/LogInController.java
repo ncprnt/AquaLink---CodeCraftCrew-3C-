@@ -19,6 +19,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import administrator.Administrator;
+import government.Government;
+
 
 public class LogInController implements Initializable {
 
@@ -108,6 +111,14 @@ public class LogInController implements Initializable {
                 publicController.initializeWithUser();
             } else if (controller instanceof NPO) {
                 NPO npoController = (NPO) controller;
+                npoController.setLoggedInUser(email);
+                npoController.initializeWithUser();
+            } else if (controller instanceof Government) {
+                Government governmentController = (Government) controller;
+                governmentController.setLoggedInUser(email);
+                governmentController.initializeWithUser();
+            } else if (controller instanceof Administrator) {
+                Administrator npoController = (Administrator) controller;
                 npoController.setLoggedInUser(email);
                 npoController.initializeWithUser();
             } else {

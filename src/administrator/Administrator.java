@@ -44,6 +44,11 @@ public class Administrator implements Initializable {
     @FXML
     private Label projectLabel;
 
+    @FXML
+    private Label nameLabel;
+
+    private String loggedInUserEmail;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         loadReportData();
@@ -61,6 +66,43 @@ public class Administrator implements Initializable {
         // Adjust bar gap and category gap for projectChart
         projectChart.setBarGap(20);
         projectChart.setCategoryGap(20);
+    }
+
+    public void setLoggedInUser(String email) {
+        this.loggedInUserEmail = email;
+    }
+
+    public void initializeWithUser() {
+        loadUserName();
+    }
+
+    private void loadUserName() {
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse("src/database/Account.xml");
+
+            NodeList accounts = doc.getElementsByTagName("user");
+
+            for (int i = 0; i < accounts.getLength(); i++) {
+                Element account = (Element) accounts.item(i);
+                String email = account.getElementsByTagName("email").item(0).getTextContent();
+
+                if (email.equals(loggedInUserEmail)) {
+                    String firstName = account.getElementsByTagName("firstName").item(0).getTextContent();
+                    String lastName = account.getElementsByTagName("lastName").item(0).getTextContent();
+                    String fullName = firstName + " " + lastName + "!";
+                    setNameLabel(fullName);
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setNameLabel(String name) {
+        nameLabel.setText(name);
     }
 
     private void loadReportData() {
@@ -229,7 +271,7 @@ public class Administrator implements Initializable {
 
     @FXML
     private void handleLoadProject() {
-        loadFXML("/projectedit/ProjectEdit.fxml");
+        loadFXML("/project/Project.fxml");
     }
 
     @FXML
